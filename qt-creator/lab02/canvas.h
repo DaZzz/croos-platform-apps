@@ -2,6 +2,7 @@
 #define CANVAS_H
 
 #include <QWidget>
+#include <vector>
 
 class Canvas : public QWidget
 {
@@ -9,13 +10,15 @@ class Canvas : public QWidget
 
 private:
     QPixmap pixmap;
+    void drawGraph(QPainter &painter, int n);
+    std::vector<QPoint> getPoints(int n);
 
 public:
     explicit Canvas(QWidget *parent = 0);
 
 protected:
-    void paintEvent(QPaintEvent *event);
     void resizeEvent(QResizeEvent *event);
+    void paintEvent(QPaintEvent *);
 
 };
 
