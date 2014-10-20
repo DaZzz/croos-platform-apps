@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QAction>
 #include <QMenu>
+#include "canvas.h"
 
 class MainWindow : public QMainWindow
 {
@@ -16,6 +17,7 @@ public:
 private:
     void createMenus();
     void createActions();
+    void drawCircle(int x, int y, QPainter &painter);
 
     QMenu *fileMenu;
     QMenu *editMenu;
@@ -24,6 +26,8 @@ private:
     QAction *exitAction;
     QAction *setParamsAction;
     QAction *showAboutAction;
+
+    Canvas *canvas;
 
 private slots:
     void showInputParamsDialog();

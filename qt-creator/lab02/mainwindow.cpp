@@ -3,8 +3,19 @@
 
 MainWindow::MainWindow()
 {
+    canvas = new Canvas;
+    setCentralWidget(canvas);
+
     createActions();
     createMenus();
+
+    setWindowTitle(tr("Рисователь звездочек"));
+    setMinimumSize(480, 320);
+    resize(480, 320);
+}
+
+MainWindow::~MainWindow()
+{
 }
 
 void MainWindow::createActions()
@@ -29,10 +40,6 @@ void MainWindow::createMenus()
 
     helpMenu = menuBar()->addMenu(tr("&Справка"));
     helpMenu->addAction(showAboutAction);
-}
-
-MainWindow::~MainWindow()
-{
 }
 
 void MainWindow::showInputParamsDialog()
