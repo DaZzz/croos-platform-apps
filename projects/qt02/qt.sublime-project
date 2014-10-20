@@ -9,8 +9,9 @@
   [
       {
           "path": "/usr/local/bin:/usr/bin:/bin",
+          "working_dir": "${project_path}",
           "name": "CMake - Qt",
-          "cmd": ["sh", "build.sh"]
+          "cmd": ["sh", "$project_path/build.sh"]
       }
   ]
 }

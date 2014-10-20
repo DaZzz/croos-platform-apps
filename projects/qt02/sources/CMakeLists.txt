@@ -26,7 +26,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 find_package(Qt5Widgets REQUIRED)
 
 # Tell CMake to create the helloworld executable
-add_executable(qt02 main.cpp ${UI_HEADERS} ${QRCS})
+add_executable(qt02 main.cpp main_window.cpp ${UI_HEADERS} ${QRCS})
 
 # Add the Qt5 Widgets for linking
 target_link_libraries(qt02 Qt5::Widgets)

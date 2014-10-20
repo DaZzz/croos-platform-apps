@@ -1,12 +1,10 @@
 #include <QApplication>
-#include <QLabel>
-#include <QPushButton>
+#include "main_window.h"
 
 int main(int argc, char *argv[])
 {
   QApplication app(argc, argv);
-  QPushButton *pButton = new QPushButton("&Hello world!");
-  QObject::connect(pButton, SIGNAL(clicked()), &app, SLOT(quit()));
-  pButton->show();
+  MainWindow *pMainWindow = new MainWindow;
+  pMainWindow->show();
   return app.exec();
 }

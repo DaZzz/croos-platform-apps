@@ -1,5 +1,6 @@
-mkdir -p build
+mkdir build
 cd build
-cmake ../
+pwd
+cmake ../sources
 make
 ./qt02
