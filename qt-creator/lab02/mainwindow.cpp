@@ -6,6 +6,8 @@ MainWindow::MainWindow()
     canvas = new Canvas;
     setCentralWidget(canvas);
 
+    inputDialog = new InputDialog(this);
+
     createActions();
     createMenus();
 
@@ -44,7 +46,7 @@ void MainWindow::createMenus()
 
 void MainWindow::showInputParamsDialog()
 {
-    QMessageBox::warning(0,"Warning", tr("Здесь будет диалог «Входные данные»!"));
+    inputDialog->exec();
 }
 
 void MainWindow::showAboutDialog()

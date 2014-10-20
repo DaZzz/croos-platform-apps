@@ -14,7 +14,9 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    canvas.cpp
+    canvas.cpp \
+    inputdialog.cpp
 
 HEADERS  += mainwindow.h \
-    canvas.h
+    canvas.h \
+    inputdialog.h

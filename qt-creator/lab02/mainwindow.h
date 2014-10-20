@@ -5,6 +5,7 @@
 #include <QAction>
 #include <QMenu>
 #include "canvas.h"
+#include "inputdialog.h"
 
 class MainWindow : public QMainWindow
 {
@@ -28,6 +29,7 @@ private:
     QAction *showAboutAction;
 
     Canvas *canvas;
+    InputDialog *inputDialog;
 
 private slots:
     void showInputParamsDialog();
