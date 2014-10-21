@@ -12,7 +12,7 @@ private:
     QPixmap pixmap;
     int _pointsNumber;
 
-    void drawGraph(QPainter &painter, int n);
+    void drawGraph(int n);
     std::vector<QPoint> getPoints(int n);
 
 public:

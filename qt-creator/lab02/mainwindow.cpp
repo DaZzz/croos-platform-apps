@@ -17,8 +17,8 @@ MainWindow::MainWindow()
     createMenus();
 
     setWindowTitle(tr("Рисователь звездочек"));
-    setMinimumSize(480, 320);
-    resize(480, 320);
+    setMinimumSize(640, 480);
+    resize(640, 480);
 }
 
 MainWindow::~MainWindow()
