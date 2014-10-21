@@ -7,6 +7,11 @@ MainWindow::MainWindow()
     setCentralWidget(canvas);
 
     inputDialog = new InputDialog(this);
+    QObject::connect(
+                inputDialog, SIGNAL(pointsNumberChanged(int)),
+                this, SLOT(setPointsNumber(int)));
+
+    aboutDialog = new AboutDialog(this);
 
     createActions();
     createMenus();
@@ -28,7 +33,7 @@ void MainWindow::createActions()
     setParamsAction = new QAction(tr("&Входные данные"), this);
     connect(setParamsAction, SIGNAL(triggered()), this, SLOT(showInputParamsDialog()));
 
-    showAboutAction = new QAction(tr("&Справка"), this);
+    showAboutAction = new QAction(tr("&О программе"), this);
     connect(showAboutAction, SIGNAL(triggered()), this, SLOT(showAboutDialog()));
 }
 
@@ -51,5 +56,10 @@ void MainWindow::showInputParamsDialog()
 
 void MainWindow::showAboutDialog()
 {
-    QMessageBox::warning(0,"Warning", tr("Здесь будет диалог «О программе»!"));
+    aboutDialog->exec();
+}
+
+void MainWindow::setPointsNumber(int newValue)
+{
+    canvas->setPointsNumber(newValue);
 }

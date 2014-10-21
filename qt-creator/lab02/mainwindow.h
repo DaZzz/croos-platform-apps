@@ -6,6 +6,7 @@
 #include <QMenu>
 #include "canvas.h"
 #include "inputdialog.h"
+#include "aboutdialog.h"
 
 class MainWindow : public QMainWindow
 {
@@ -30,10 +31,12 @@ private:
 
     Canvas *canvas;
     InputDialog *inputDialog;
+    AboutDialog *aboutDialog;
 
 private slots:
     void showInputParamsDialog();
     void showAboutDialog();
+    void setPointsNumber(int newValue);
 };
 
 #endif // MAINWINDOW_H

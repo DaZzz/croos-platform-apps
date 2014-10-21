@@ -7,7 +7,7 @@ InputDialog::InputDialog(QWidget *parent) :
 
     buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok
                                      | QDialogButtonBox::Cancel);
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(onAccept()));
     connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
 
 
@@ -25,8 +25,14 @@ void InputDialog::createFormGroupBox()
 {
     formGroupBox = new QGroupBox();
     QFormLayout *layout = new QFormLayout;
-    QSpinBox *spinBox = new QSpinBox;
+    spinBox = new QSpinBox;
     spinBox->setMinimum(1);
     layout->addRow(new QLabel("Количество точек:"), spinBox);
     formGroupBox->setLayout(layout);
+}
+
+void InputDialog::onAccept()
+{
+    emit pointsNumberChanged(spinBox->value());
+    this->close();
 }

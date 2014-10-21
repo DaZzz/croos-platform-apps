@@ -10,6 +10,8 @@ class Canvas : public QWidget
 
 private:
     QPixmap pixmap;
+    int _pointsNumber;
+
     void drawGraph(QPainter &painter, int n);
     std::vector<QPoint> getPoints(int n);
 
@@ -19,6 +21,9 @@ public:
 protected:
     void resizeEvent(QResizeEvent *event);
     void paintEvent(QPaintEvent *);
+
+public slots:
+    void setPointsNumber(int newValue);
 
 };
 

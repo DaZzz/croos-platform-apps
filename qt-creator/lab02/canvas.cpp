@@ -5,7 +5,7 @@
 Canvas::Canvas(QWidget *parent) :
     QWidget(parent)
 {
-
+    _pointsNumber = 1;
 }
 
 void Canvas::resizeEvent(QResizeEvent *event)
@@ -14,7 +14,7 @@ void Canvas::resizeEvent(QResizeEvent *event)
     pixmap.fill(Qt::white);
     QPainter painter(&pixmap);
     painter.setRenderHint(QPainter::Antialiasing, true);
-    drawGraph(painter, 30);
+    drawGraph(painter, _pointsNumber);
 }
 
 void Canvas::paintEvent(QPaintEvent *)
@@ -26,7 +26,7 @@ void Canvas::paintEvent(QPaintEvent *)
 void Canvas::drawGraph(QPainter &painter, int n)
 {
     const int R = 10;
-    std::vector<QPoint> points = getPoints(10);
+    std::vector<QPoint> points = getPoints(n);
 
     painter.setPen(QColor("#bbbbbb"));
     for (int i = 0; i < points.size(); ++i) {
@@ -54,4 +54,13 @@ std::vector<QPoint> Canvas::getPoints(int n)
     }
 
     return v;
+}
+
+void Canvas::setPointsNumber(int newValue)
+{
+    _pointsNumber = newValue;
+    pixmap.fill(Qt::white);
+    QPainter painter(&pixmap);
+    painter.setRenderHint(QPainter::Antialiasing, true);
+    drawGraph(painter, _pointsNumber);
 }

@@ -15,12 +15,13 @@ private:
 
     QGroupBox        *formGroupBox;
     QDialogButtonBox *buttonBox;
-
+    QSpinBox         *spinBox;
 
 signals:
+    void pointsNumberChanged(int);
 
 public slots:
-
+    void onAccept();
 };
 
 #endif // INPUTDIALOG_H
