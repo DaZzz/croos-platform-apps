@@ -54,10 +54,9 @@ std::vector<QPoint> Canvas::getPoints(int n)
     const double STEP = 2 * M_PI / n;
     std::vector<QPoint> v;
 
-    for (int i = 0; i < n; ++i) {
-        double p = STEP * i;
-        int x = static_cast<int>(180 * cos(p) + geometry().center().rx());
-        int y = static_cast<int>(180 * sin(p) + geometry().center().ry());
+    for (double t = 0; t < 2 * M_PI - 0.0000001; t += STEP) {
+        int x = static_cast<int>(180 * cos(t) + geometry().center().rx());
+        int y = static_cast<int>(180 * sin(t) + geometry().center().ry());
         v.push_back(QPoint(x, y));
     }
 
