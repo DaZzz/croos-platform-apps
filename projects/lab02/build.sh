@@ -3,4 +3,4 @@ cd build
 pwd
 cmake ../sources
 make
-./qt02
+./lab02
