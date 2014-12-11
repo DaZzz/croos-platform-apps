@@ -760,10 +760,19 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/DaZzz/Developer/qt/projects/lab02"
+		"/Users/DaZzz/Developer/qt/projects/lab02",
+		"/Users/DaZzz/Developer/qt/projects/lab02/sources"
 	],
 	"file_history":
 	[
+		"/Users/DaZzz/Developer/qt/projects/lab02/sources/aboutdialog.h",
+		"/Users/DaZzz/Developer/qt/projects/lab02/sources/mainwindow.h",
+		"/Users/DaZzz/Developer/qt/projects/lab02/sources/canvas.cpp",
+		"/Users/DaZzz/Developer/qt/projects/lab02/sources/mainwindow.cpp",
+		"/Users/DaZzz/Developer/qt/projects/lab02/sources/canvas.h",
+		"/Users/DaZzz/Developer/qt/projects/lab02/sources/inputdialog.h",
+		"/Users/DaZzz/Developer/qt/projects/lab02/sources/inputdialog.cpp",
+		"/Users/DaZzz/Developer/qt/projects/lab02/sources/aboutdialog.cpp",
 		"/Users/DaZzz/Developer/qt/projects/lab02/sources/CMakeLists.txt",
 		"/Users/DaZzz/Developer/qt/projects/lab02/sources/main_window.cpp",
 		"/Users/DaZzz/Developer/qt/projects/lab02/sources/main.cpp",
@@ -883,15 +892,7 @@
 		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/app/controllers/applicationController.coffee",
 		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/app/routes/applicationRoute.coffee",
 		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/node_modules/rsync/b/a.txt",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/app/styles/order.styl",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/app/models/organization.coffee",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/app/views/orderView.coffee",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/app/styles/styles.styl",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/app/models/basket.coffee",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/node_modules/auto-reload-brunch/node_modules/ws/lib/BufferUtil.js",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/app/components/smTextAreaComponent.coffee",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/app/initializers/session.coffee",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/app/models/order.coffee"
+		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/app/styles/order.styl"
 	],
 	"find":
 	{
