@@ -30,9 +30,11 @@ void MainWindow::openFile()
 //         tr("Открыть архив"), "", tr("Файловый архив (*.*)"));
 
     MdiChild *child = new MdiChild;
+
     ui->mdiArea->addSubWindow(child);
-    child->loadFile(QDir::currentPath());
+    child->loadFile("/Users/DaZzz/Desktop");
     child->show();
+    child->parentWidget()->resize(500, 500);
 
 //    qDebug();
 }

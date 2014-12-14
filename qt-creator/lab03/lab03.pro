@@ -19,11 +19,13 @@ DEPENDPATH += /usr/local/Cellar/libarchive/3.1.2/include
 SOURCES += main.cpp\
         mainwindow.cpp \
     aboutdialog.cpp \
-    mdichild.cpp
+    mdichild.cpp \
+    editablefilesystemmodel.cpp
 
 HEADERS  += mainwindow.h \
     aboutdialog.h \
-    mdichild.h
+    mdichild.h \
+    editablefilesystemmodel.h
 
 FORMS    += mainwindow.ui \
     aboutdialog.ui

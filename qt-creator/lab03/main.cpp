@@ -2,6 +2,8 @@
 #include <QApplication>
 #include <archive.h>
 #include <archive_entry.h>
+#include <QtDebug>
+#include <QFile>
 
 int main(int argc, char *argv[])
 {

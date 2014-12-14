@@ -2,8 +2,9 @@
 #define MDICHILD_H
 
 #include <QWidget>
-#include <QFileSystemModel>
+//#include "treeview.h"
 #include <QTreeView>
+#include "editablefilesystemmodel.h"
 
 class MdiChild : public QWidget
 {
@@ -13,7 +14,7 @@ public:
     void loadFile(QString filePath);
 
 private:
-    QFileSystemModel *model;
+    EditableFileSystemModel *model;
     QTreeView *treeView;
 
 signals:
