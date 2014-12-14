@@ -15,9 +15,11 @@ LIBS += -L/usr/local/Cellar/libarchive/3.1.2/lib/ -larchive
 INCLUDEPATH += /usr/local/Cellar/libarchive/3.1.2/include
 DEPENDPATH += /usr/local/Cellar/libarchive/3.1.2/include
 
-SOURCES += main.cpp\
-        mainwindow.cpp
+SOURCES += main.cpp \
+    main-window.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += \
+    main-window.h
 
-FORMS    += mainwindow.ui
+FORMS    += \
+    main-window.ui
