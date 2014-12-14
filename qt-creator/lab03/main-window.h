@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+#include "aboutdialog.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -15,8 +17,15 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+    void openFile();
+    void openAboutDialog();
+
 private:
+    void setupActions();
+
     Ui::MainWindow *ui;
+    AboutDialog *aboutDialog;
 };
 
 #endif // MAINWINDOW_H

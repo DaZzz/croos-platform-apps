@@ -15,11 +15,13 @@ LIBS += -L/usr/local/Cellar/libarchive/3.1.2/lib/ -larchive
 INCLUDEPATH += /usr/local/Cellar/libarchive/3.1.2/include
 DEPENDPATH += /usr/local/Cellar/libarchive/3.1.2/include
 
-SOURCES += main.cpp \
-    main-window.cpp
 
-HEADERS  += \
-    main-window.h
+SOURCES += main.cpp\
+        mainwindow.cpp \
+    aboutdialog.cpp
 
-FORMS    += \
-    main-window.ui
+HEADERS  += mainwindow.h \
+    aboutdialog.h
+
+FORMS    += mainwindow.ui \
+    aboutdialog.ui
