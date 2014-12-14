@@ -16,10 +16,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     aboutDialog = new AboutDialog(this);
 
-    MdiChild *child = new MdiChild;
-    child->loadFile(QDir::currentPath());
-    ui->mdiArea->addSubWindow(child);
-
     setupActions();
 }
 
@@ -30,10 +26,15 @@ MainWindow::~MainWindow()
 
 void MainWindow::openFile()
 {
-    QString fileName = QFileDialog::getOpenFileName(this,
-         tr("Открыть архив"), "", tr("Файловый архив (*.*)"));
+//    QString fileName = QFileDialog::getOpenFileName(this,
+//         tr("Открыть архив"), "", tr("Файловый архив (*.*)"));
 
+    MdiChild *child = new MdiChild;
+    ui->mdiArea->addSubWindow(child);
+    child->loadFile(QDir::currentPath());
+    child->show();
 
+//    qDebug();
 }
 
 void MainWindow::openAboutDialog()
