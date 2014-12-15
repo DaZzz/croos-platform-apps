@@ -1,13 +1,19 @@
 #include "mainwindow.h"
 #include <QApplication>
-#include <archive.h>
-#include <archive_entry.h>
 #include <QtDebug>
 #include <QFile>
+#include <QTranslator>
 
 int main(int argc, char *argv[])
 {
+
     QApplication a(argc, argv);
+
+    QString locale = QLocale::system().name();
+    QTranslator translator;
+    qDebug() << translator.load(QString("/Users/DaZzz/Developer/qt/qt-creator/lab03/lab03_") + locale);
+    a.installTranslator(&translator);
+
     MainWindow w;
     w.show();
 

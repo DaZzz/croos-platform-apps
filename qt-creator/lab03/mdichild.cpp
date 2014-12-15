@@ -90,7 +90,7 @@ void MdiChild::loadFile(QString filePath)
 void MdiChild::onCustomContextMenu(const QPoint &point)
 {
     QModelIndex index = treeView->indexAt(point);
-    QMenu *contextMenu = new QMenu("&Контекстное меню");
+    QMenu *contextMenu = new QMenu(tr("&Контекстное меню"));
 
     contextMenu->addAction(createDirAction);
     contextMenu->addAction(addDirAction);
@@ -105,13 +105,13 @@ void MdiChild::onCustomContextMenu(const QPoint &point)
 
 void MdiChild::createActions()
 {
-    removeAction = new QAction("&Удалить", this);
+    removeAction = new QAction(tr("&Удалить"), this);
     connect(removeAction, SIGNAL(triggered()), this, SLOT(remove()));
-    createDirAction = new QAction("&Создать каталог", this);
+    createDirAction = new QAction(tr("&Создать каталог"), this);
     connect(createDirAction, SIGNAL(triggered()), this, SLOT(createDir()));
-    addDirAction = new QAction("&Добавить существующий каталог", this);
+    addDirAction = new QAction(tr("&Добавить существующий каталог"), this);
     connect(addDirAction, SIGNAL(triggered()), this, SLOT(addDir()));
-    addFileAction = new QAction("&Добавить файл", this);
+    addFileAction = new QAction(tr("&Добавить файл"), this);
     connect(addFileAction, SIGNAL(triggered()), this, SLOT(addFile()));
 }
 

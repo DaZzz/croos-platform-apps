@@ -1,7 +1,6 @@
 #include <QDebug>
 #include <QFileDialog>
 #include <QMdiSubWindow>
-
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "aboutdialog.h"
@@ -26,17 +25,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::openFile()
 {
-//    QString fileName = QFileDialog::getOpenFileName(this,
-//         tr("Открыть архив"), "", tr("Файловый архив (*.*)"));
-
     MdiChild *child = new MdiChild;
+
+    // Осталось добавить функцию разархивации :(
 
     ui->mdiArea->addSubWindow(child);
     child->loadFile("/Users/DaZzz/Desktop");
     child->show();
     child->parentWidget()->resize(500, 500);
-
-//    qDebug();
 }
 
 void MainWindow::openAboutDialog()
@@ -50,15 +46,3 @@ void MainWindow::setupActions()
     connect(ui->showAboutAction, SIGNAL(triggered()), this, SLOT(openAboutDialog()));
 }
 
-//void MainWindow::createMdiChild()
-//{
-//    MdiChild *child = new MdiChild;
-//    mdiArea->addSubWindow();
-
-//    connect(child, SIGNAL(copyAvailable(bool)),
-//            cutAct, SLOT(setEnabled(bool)));
-//    connect(child, SIGNAL(copyAvailable(bool)),
-//            copyAct, SLOT(setEnabled(bool)));
-
-//    return child;
-//}
