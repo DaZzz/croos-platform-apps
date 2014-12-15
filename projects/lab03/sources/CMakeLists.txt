@@ -33,11 +33,15 @@ SET(TRANS lab03_en_US.ts)
 
 # Generate code from ui files
 qt5_wrap_ui(UI_HEADERS mainwindow.ui aboutdialog.ui)
-
 qt5_add_translation(QM ${TRANS})
 
+
+if(WIN32)
+  set(gui_type WIN32)
+endif()
+
 # Tell CMake to create the helloworld executable
-add_executable(lab03 main.cpp mainwindow.cpp aboutdialog.cpp editablefilesystemmodel.cpp mdichild.cpp ${UI_HEADERS} ${QRCS} ${QM})
+add_executable(lab03 ${gui_type} main.cpp mainwindow.cpp aboutdialog.cpp editablefilesystemmodel.cpp mdichild.cpp ${UI_HEADERS} ${QRCS} ${QM})
 
 # Add the Qt5 Widgets for linking
 target_link_libraries(lab03 Qt5::Widgets)
