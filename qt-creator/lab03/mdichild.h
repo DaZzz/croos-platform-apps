@@ -2,7 +2,6 @@
 #define MDICHILD_H
 
 #include <QWidget>
-//#include "treeview.h"
 #include <QTreeView>
 #include "editablefilesystemmodel.h"
 
