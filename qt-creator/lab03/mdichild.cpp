@@ -82,6 +82,9 @@ void MdiChild::loadFile(QString filePath)
 {
      model->setRootPath(filePath);
      treeView->setRootIndex(model->index(filePath));
+     // Распаковать архив в папку рядом и установить root
+     // по закрытию удалить папку
+     // при каждом апдэйте модели сохранять архив
 }
 
 void MdiChild::onCustomContextMenu(const QPoint &point)
@@ -185,7 +188,7 @@ void MdiChild::addFile()
         QString path = QFileDialog::getOpenFileName(
                             this, tr("Добавить файл"),
                             QDir::rootPath(),
-                            tr("Файловый архив (*.*)"));
+                            tr("Файл (*.*)"));
 
         QString to = model->filePath(index) + QDir::separator();
         QFile::copy(path, to + QFileInfo(path).fileName());
