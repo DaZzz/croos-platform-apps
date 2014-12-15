@@ -14,12 +14,24 @@ public:
     void loadFile(QString filePath);
 
 private:
+    void createActions();
+
     EditableFileSystemModel *model;
     QTreeView *treeView;
+
+    QAction *removeAction;
+    QAction *addFileAction;
+    QAction *addDirAction;
+    QAction *createDirAction;
 
 signals:
 
 public slots:
+    void onCustomContextMenu(const QPoint &point);
+    void remove();
+    void addFile();
+    void addDir();
+    void createDir();
 
 };
 
