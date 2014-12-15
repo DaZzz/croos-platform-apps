@@ -9,7 +9,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 
 # Cmake prefix for Qt5
-set(CMAKE_PREFIX_PATH "/Users/DaZzz/Qt/5.3/clang_64/")
+# set(CMAKE_PREFIX_PATH "/Users/DaZzz/Qt/5.3/clang_64/")
 
 
 # There may be a way to tell up front if Qt5 is going to be found, but I haven't found
@@ -21,7 +21,7 @@ set(CMAKE_PREFIX_PATH "/Users/DaZzz/Qt/5.3/clang_64/")
 #endif(NOT CMAKE_PREFIX_PATH AND NOT Qt5Widgets_DIR)
 
 # Add a compiler flag
-set(CMAKE_CXX_FLAGS "-std=c++0x -stdlib=libc++ -g3 -Wall -O0")
+# set(CMAKE_CXX_FLAGS "-std=c++0x -stdlib=libc++ -g3 -Wall -O0")
 
 # Find the QtWidgets library
 find_package(Qt5Widgets REQUIRED)
@@ -45,3 +45,27 @@ add_executable(lab03 ${gui_type} main.cpp mainwindow.cpp aboutdialog.cpp editabl
 
 # Add the Qt5 Widgets for linking
 target_link_libraries(lab03 Qt5::Widgets)
+
+
+# Installation
+# install(
+#   TARGETS lab03
+#   RUNTIME DESTINATION bin)
+
+# install(
+#   FILES ${QM}
+#   DESTINATION translations)
+
+# include(DeployQt4)
+
+# get_property(
+#   EXE_PATH
+#   TARGET lab03
+#   PROPERTY LOCATION)
+
+# message(${QM})
+
+# if(EXE_PATH)
+#   get_filename_component(EXE_NAME ${EXE_PATH} NAME)
+#   install_qt4_executable(bin/${EXE_NAME})
+# endif()

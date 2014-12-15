@@ -32,9 +32,21 @@
         <translation>Windows</translation>
     </message>
     <message>
+        <source>Еще</source>
+        <translation type="vanished">More</translation>
+    </message>
+    <message>
+        <source>Пункт А</source>
+        <translation type="vanished">Item A</translation>
+    </message>
+    <message>
         <location filename="mainwindow.ui" line="60"/>
         <source>Справка</source>
         <translation>Help</translation>
+    </message>
+    <message>
+        <source>&amp;Еще</source>
+        <translation type="vanished">&amp;More</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="71"/>
@@ -43,8 +55,9 @@
     </message>
     <message>
         <location filename="mainwindow.ui" line="76"/>
-        <source>Выход</source>
-        <translation>Quit</translation>
+        <source>Завершить</source>
+        <oldsource>Выйти</oldsource>
+        <translation>Close</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="81"/>
@@ -54,8 +67,14 @@
     </message>
     <message>
         <location filename="mainwindow.ui" line="89"/>
-        <source>О программе</source>
-        <translation>About program</translation>
+        <source>Информация</source>
+        <oldsource>Инфо</oldsource>
+        <translation type="unfinished">Information</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="94"/>
+        <source>&amp;Пункт а</source>
+        <translation>&amp;Item A</translation>
     </message>
 </context>
 <context>

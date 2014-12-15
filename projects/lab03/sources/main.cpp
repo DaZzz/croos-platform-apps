@@ -11,8 +11,8 @@ int main(int argc, char *argv[])
 
     QString locale = QLocale::system().name();
     QTranslator translator;
-    qDebug() << locale;
-    qDebug() << translator.load("lab03_en_US");
+    qDebug() << "Locale:" << locale;
+    qDebug() << "Translation found:" << translator.load("lab03_" + locale);
     a.installTranslator(&translator);
 
     MainWindow w;
