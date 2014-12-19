@@ -1,25 +1,27 @@
 #ifndef ZIPITEM_H
 #define ZIPITEM_H
 
-#include <QObject>
-
-class ZipItem : public QObject
+class ZipItem
 {
-    Q_OBJECT
 public:
-    explicit ZipItem(QObject *parent = 0);
+    ZipItem(TreeItem *parent, QString &name, int size, bool isDir);
+    ~ZipItem();
+
+    void appendChild(ZipItem *item);
 
     ZipItem *child(int row);
     ZipItem *parent();
     int childCount() const;
     int columnCount() const;
     int row() const;
-    QString *getSize();
-    QString *getName();
+    int getSize() const;
+    bool isDir() const;
+    QString getName() const;
 
 
 private:
     int size;
+    bool isDir;
     QString name;
     ZipItem *parentItem;
     QList<ZipItem *> childItems;
