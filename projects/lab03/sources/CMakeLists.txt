@@ -48,24 +48,24 @@ target_link_libraries(lab03 Qt5::Widgets)
 
 
 # Installation
-# install(
-#   TARGETS lab03
-#   RUNTIME DESTINATION bin)
+install(
+  TARGETS lab03
+  RUNTIME DESTINATION bin)
 
-# install(
-#   FILES ${QM}
-#   DESTINATION translations)
+install(
+  FILES ${QM}
+  DESTINATION translations)
 
-# include(DeployQt4)
+include(DeployQt4)
 
-# get_property(
-#   EXE_PATH
-#   TARGET lab03
-#   PROPERTY LOCATION)
+get_property(
+  EXE_PATH
+  TARGET lab03
+  PROPERTY LOCATION)
 
-# message(${QM})
+message(${QM})
 
-# if(EXE_PATH)
-#   get_filename_component(EXE_NAME ${EXE_PATH} NAME)
-#   install_qt4_executable(bin/${EXE_NAME})
-# endif()
+if(EXE_PATH)
+  get_filename_component(EXE_NAME ${EXE_PATH} NAME)
+  install_qt4_executable(bin/${EXE_NAME})
+endif()

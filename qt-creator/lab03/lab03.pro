@@ -22,12 +22,14 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     aboutdialog.cpp \
     mdichild.cpp \
-    editablefilesystemmodel.cpp
+    editablefilesystemmodel.cpp \
+    zipmodel.cpp
 
 HEADERS  += mainwindow.h \
     aboutdialog.h \
     mdichild.h \
-    editablefilesystemmodel.h
+    editablefilesystemmodel.h \
+    zipmodel.h
 
 FORMS    += mainwindow.ui \
     aboutdialog.ui

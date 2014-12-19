@@ -26,6 +26,9 @@ int main(int argc, char *argv[])
 
     while (archive_read_next_header(a, &entry) == ARCHIVE_OK) {
       qDebug() << archive_entry_pathname(entry);
+//      qDebug() << archive_entry_stat(entry)->st_size;
+//      qDebug() << (QString::number(S_IFDIR, 8));
+//      qDebug() << (QString::number(archive_entry_stat(entry)->st_mode));
       archive_read_data_skip(a);  // Note 2
     }
     // Reading archive end

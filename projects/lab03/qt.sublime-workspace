@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"exe",
+				"EXE_PATH"
+			],
+			[
 				"p",
 				"pLayoutMain"
 			],
@@ -510,15 +514,35 @@
 			[
 				"dr",
 				"draft_category"
-			],
-			[
-				"menu",
-				"menu_order"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "build.sh",
+			"settings":
+			{
+				"buffer_size": 184,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sources/CMakeLists.txt",
+			"settings":
+			{
+				"buffer_size": 1889,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sources/main.cpp",
+			"settings":
+			{
+				"buffer_size": 460,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "CMake - Qt",
 	"command_palette":
@@ -760,10 +784,17 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/DaZzz/Developer/qt/projects/lab03"
+		"/Users/DaZzz/Developer/qt/projects/lab03",
+		"/Users/DaZzz/Developer/qt/projects/lab03/sources"
 	],
 	"file_history":
 	[
+		"/usr/local/Cellar/cmake/3.0.0/share/cmake/Modules/DeployQt4.cmake",
+		"/Users/DaZzz/Developer/qt/projects/lab03/sources/CMakeLists.txt",
+		"/Users/DaZzz/Developer/qt/projects/lab03/sources/main.cpp",
+		"/Users/DaZzz/Developer/qt/projects/lab03/build/lab03",
+		"/Users/DaZzz/Developer/qt/.git/COMMIT_EDITMSG",
+		"/Users/DaZzz/Developer/qt/projects/lab03/sources/lab03.pro",
 		"/Users/DaZzz/Developer/qt/projects/lab02/sources/aboutdialog.h",
 		"/Users/DaZzz/Developer/qt/projects/lab02/sources/mainwindow.h",
 		"/Users/DaZzz/Developer/qt/projects/lab02/sources/canvas.cpp",
@@ -777,7 +808,6 @@
 		"/Users/DaZzz/Developer/qt/projects/lab02/sources/main.cpp",
 		"/Users/DaZzz/Developer/qt/projects/lab02/build.sh",
 		"/Users/DaZzz/Developer/qt/projects/lab02/sources/main_window.h",
-		"/Users/DaZzz/Developer/qt/.git/COMMIT_EDITMSG",
 		"/Users/DaZzz/Developer/qt/projects/qt02/sources/main.cpp",
 		"/Users/DaZzz/Developer/qt/projects/qt02/build.sh",
 		"/Users/DaZzz/Developer/qt/projects/qt02/qt.sublime-project",
@@ -886,12 +916,7 @@
 		"/Users/DaZzz/Developer/web-workspace/smartomato/manager/node_modules/bower/node_modules/bower-registry-client/node_modules/bower-config/node_modules/mout/object/deepEquals.js",
 		"/Users/DaZzz/Developer/web-workspace/smartomato/manager/app/routes/deliveryRoute.coffee",
 		"/Users/DaZzz/Developer/web-workspace/smartomato/manager/app/templates/application.emblem",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/manager/node_modules/rsync/b/a.txt",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/app/templates/application.emblem",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/app/controllers/applicationController.coffee",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/app/routes/applicationRoute.coffee",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/node_modules/rsync/b/a.txt",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/mobile_manager/app/styles/order.styl"
+		"/Users/DaZzz/Developer/web-workspace/smartomato/manager/node_modules/rsync/b/a.txt"
 	],
 	"find":
 	{
@@ -1088,8 +1113,95 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "build.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								159,
+								159
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sources/CMakeLists.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1889,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1571,
+								1571
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CMake/CMake.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 611.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sources/main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 460,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								459,
+								459
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
