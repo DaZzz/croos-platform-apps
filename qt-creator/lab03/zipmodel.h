@@ -8,7 +8,7 @@ class ZipModel : public QAbstractItemModel
 {
     Q_OBJECT
 public:
-    ZipModel(const QString &filePath, Object *parent = 0);
+    ZipModel(const QString &filePath, QObject *parent = 0);
     ~ZipModel();
 
     QVariant data(const QModelIndex &index, int role) const;

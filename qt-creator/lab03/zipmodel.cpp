@@ -1,37 +1,43 @@
 #include "zipmodel.h"
 
-#include <archive.h>
-#include <archive_entry.h>
+//#include <archive.h>
+//#include <archive_entry.h>
+#include <QDebug>
 
 ZipModel::ZipModel(const QString &filePath, QObject *parent) :
     QAbstractItemModel(parent)
 {
     //
-    struct archive *a;
-    struct archive_entry *entry;
-    int r;
-    const char *filePathString = filePath.toStdString().c_str();
+//    struct archive *a;
+//    struct archive_entry *entry;
+//    int r;
+//    const char *filePathString = filePath.toStdString().c_str();
 
-    a = archive_read_new();
-    archive_read_support_filter_all(a);
-    archive_read_support_format_all(a);
+//    a = archive_read_new();
+//    archive_read_support_filter_all(a);
+//    archive_read_support_format_all(a);
 
-    r = archive_read_open_filename(a, filePathString, 10240);
+//    r = archive_read_open_filename(a, filePathString, 10240);
 
-    if (r != ARCHIVE_OK)
-        qDebug() << "Archive is not ok!";
+//    if (r != ARCHIVE_OK)
+//        qDebug() << "Archive is not ok!";
 
-    while (archive_read_next_header(a, &entry) == ARCHIVE_OK) {
-//      qDebug() << archive_entry_pathname(entry);
-//      qDebug() << archive_entry_stat(entry)->st_size;
-//      qDebug() << (QString::number(S_IFDIR, 8));
-//      qDebug() << (QString::number(archive_entry_stat(entry)->st_mode));
+//    while (archive_read_next_header(a, &entry) == ARCHIVE_OK) {
+////      qDebug() << archive_entry_pathname(entry);
+////      qDebug() << archive_entry_stat(entry)->st_size;
+////      qDebug() << (QString::number(S_IFDIR, 8));
+////      qDebug() << (QString::number(archive_entry_stat(entry)->st_mode));
 
-      // Инициализация через массив
-      archive_read_data_skip(a);  // Note 2
-    }
+//      // Инициализация через массив
+//      archive_read_data_skip(a);  // Note 2
+//    }
 
     // Инициализировать статикой
+    rootItem = new ZipItem("Корень", 0, true);
+    ZipItem *innerDir = new ZipItem("Папка", 0, true, rootItem);
+    rootItem->appendChild(innerDir);
+    rootItem->appendChild(new ZipItem("Файл", 0, false, rootItem));
+    innerDir->appendChild(new ZipItem("Вложенный файл", 0, false, innerDir));
 
 }
 
@@ -70,7 +76,7 @@ QModelIndex ZipModel::parent(const QModelIndex &index) const
     if (parentItem == rootItem)
         return QModelIndex();
 
-    return createIndex(parent->row(), 0, parentItem);
+    return createIndex(parentItem->row(), 0, parentItem);
 }
 
 int ZipModel::rowCount(const QModelIndex &parent) const
@@ -103,7 +109,7 @@ QVariant ZipModel::data(const QModelIndex &index, int role) const
     if (role != Qt::DisplayRole)
         return QVariant();
 
-    ZipModel *item = static_cast<ZipModel*>(index.internalPointer());
+    ZipItem *item = static_cast<ZipItem *>(index.internalPointer());
 
     return item->data(index.column());
 }

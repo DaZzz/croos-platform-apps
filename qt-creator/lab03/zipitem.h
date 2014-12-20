@@ -1,10 +1,14 @@
 #ifndef ZIPITEM_H
 #define ZIPITEM_H
 
+#include <QString>
+#include <QList>
+#include <QVariant>
+
 class ZipItem
 {
 public:
-    ZipItem(TreeItem *parent, QString &name, int size, bool isDir);
+    ZipItem(const QString &name, int size, bool isDirectory, ZipItem *parent = 0);
     ~ZipItem();
 
     void appendChild(ZipItem *item);
@@ -17,11 +21,12 @@ public:
     int getSize() const;
     bool isDir() const;
     QString getName() const;
+    QVariant data(int column) const;
 
 
 private:
     int size;
-    bool isDir;
+    bool isDirectory;
     QString name;
     ZipItem *parentItem;
     QList<ZipItem *> childItems;

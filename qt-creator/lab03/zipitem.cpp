@@ -1,7 +1,7 @@
 #include "zipitem.h"
 
-ZipItem::ZipItem(TreeItem *parent, QString &name, int size, bool isDir):
-    name(name), size(size), isDir(isDir)
+ZipItem::ZipItem(const QString &name, int size, bool isDirectory, ZipItem *parent):
+    name(name), size(size), isDirectory(isDirectory)
 {
     parentItem = parent;
 }
@@ -11,7 +11,7 @@ ZipItem::~ZipItem()
     qDeleteAll(childItems);
 }
 
-ZipItem *ZipItem::appendChild(ZipItem *item)
+void ZipItem::appendChild(ZipItem *item)
 {
     childItems.append(item);
 }
@@ -42,7 +42,7 @@ int ZipItem::row() const
 int ZipItem::getSize() const
 {
 
-    if (isDir) {
+    if (isDirectory) {
         int size = 0;
         for (ZipItem* zi : childItems)
             size += zi->getSize();
@@ -54,12 +54,27 @@ int ZipItem::getSize() const
 
 bool ZipItem::isDir() const
 {
-    return isDir;
+    return isDirectory;
 }
 
 QString ZipItem::getName() const
 {
     return name;
+}
+
+QVariant ZipItem::data(int column) const
+{
+    switch (column) {
+        case 0:
+            return name;
+            break;
+        case 1:
+            return size;
+            break;
+        default:
+            return QVariant();
+            break;
+    }
 }
 
 
