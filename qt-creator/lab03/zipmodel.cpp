@@ -176,3 +176,13 @@ QVariant ZipModel::headerData(int section, Qt::Orientation orientation,
 
     return QVariant();
 }
+
+bool ZipModel::setData(const QModelIndex &idx, const QVariant &value, int role)
+{
+    if (!idx.isValid())
+        return false;
+
+    ZipItem *zitem = static_cast<ZipItem *>(idx.internalPointer());
+    zitem->setName(value.toString());
+    return true;
+}

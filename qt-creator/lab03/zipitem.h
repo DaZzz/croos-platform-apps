@@ -21,6 +21,7 @@ public:
     int getSize() const;
     bool isDir() const;
     QString getName() const;
+    QString setName(const QString &name);
     QVariant data(int column) const;
 
 

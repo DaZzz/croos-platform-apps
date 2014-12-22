@@ -68,6 +68,11 @@ QString ZipItem::getName() const
     return name;
 }
 
+QString ZipItem::setName(const QString &name)
+{
+    this->name = name;
+}
+
 QVariant ZipItem::data(int column) const
 {
     switch (column) {
