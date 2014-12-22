@@ -8,18 +8,20 @@
 #include <QFileDialog>
 
 #include "mdichild.h"
+#include "zipmodel.h"
 
 MdiChild::MdiChild(QWidget *parent) :
     QWidget(parent)
 {
+    model = new ZipModel("");
 
     treeView = new QTreeView();
+    treeView->setModel(model);
     treeView->setSelectionMode(QAbstractItemView::ExtendedSelection);
     treeView->setDragEnabled(true);
     treeView->setAcceptDrops(true);
     treeView->setDropIndicatorShown(true);
     treeView->setColumnWidth(0, 200);
-
     treeView->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(treeView, SIGNAL(customContextMenuRequested(const QPoint &)), this, SLOT(onCustomContextMenu(const QPoint &)));
 

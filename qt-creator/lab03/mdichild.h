@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QTreeView>
 
+#include "zipmodel.h"
+
 class MdiChild : public QWidget
 {
     Q_OBJECT
@@ -11,6 +13,8 @@ public:
     explicit MdiChild(QWidget *parent = 0);
 
 private:
+    ZipModel *model;
+
     void createActions();
 
     QTreeView *treeView;
