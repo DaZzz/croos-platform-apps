@@ -49,11 +49,6 @@ ZipModel::ZipModel(const QString &filePath, QObject *parent) :
         rootItem->appendChild(item);
       }
       pathsMap.insert(path, item);
-
-      qDebug() << (archive_entry_filetype(entry) == S_IFDIR);
-      qDebug() << archive_entry_pathname(entry) << fileName;
-
-
       archive_read_data_skip(a);
     }
 }
@@ -156,7 +151,12 @@ Qt::ItemFlags ZipModel::flags(const QModelIndex &index) const
     if (!index.isValid())
         return 0;
 
-    return Qt::ItemIsEnabled | Qt::ItemIsSelectable;
+    Qt::ItemFlags flags =  Qt::ItemIsEnabled | Qt::ItemIsSelectable;
+
+    if (index.column() == 0)
+        flags |= Qt::ItemIsEditable;
+
+    return flags;
 }
 
 QVariant ZipModel::headerData(int section, Qt::Orientation orientation,
