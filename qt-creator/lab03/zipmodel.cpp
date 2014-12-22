@@ -5,6 +5,7 @@
 #include <QDebug>
 #include <QMap>
 #include <QDir>
+#include <QFileIconProvider>
 
 ZipModel::ZipModel(const QString &filePath, QObject *parent) :
     QAbstractItemModel(parent)
@@ -127,12 +128,27 @@ QVariant ZipModel::data(const QModelIndex &index, int role) const
     if (!index.isValid())
         return QVariant();
 
-    if (role != Qt::DisplayRole)
-        return QVariant();
+    switch (role) {
+    case Qt::DisplayRole: {
+        ZipItem *item = static_cast<ZipItem *>(index.internalPointer());
+        return item->data(index.column());
+    }
+    case Qt::DecorationRole: {
+        if (index.column() == 0) {
+            ZipItem *item = static_cast<ZipItem *>(index.internalPointer());
+            QFileIconProvider *fip = new QFileIconProvider;
+            if (item->isDir()) {
+                return fip->icon(QFileIconProvider::Folder);
+            }
+            else {
+                return fip->icon(QFileIconProvider::File);
+            }
+        }
 
-    ZipItem *item = static_cast<ZipItem *>(index.internalPointer());
+    }
+    }
 
-    return item->data(index.column());
+    return QVariant();
 }
 
 Qt::ItemFlags ZipModel::flags(const QModelIndex &index) const
