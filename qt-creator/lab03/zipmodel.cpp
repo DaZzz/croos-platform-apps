@@ -33,16 +33,10 @@ ZipModel::ZipModel(const QString &filePath, QObject *parent) :
       QString path         = QString::fromLocal8Bit(archive_entry_pathname(entry));
       int size             = archive_entry_size(entry);
 
-      if (isDir) {
-        qDebug() << "ITS FOLDER";
-        qDebug() << path;
-        path.chop(1); // удаляем последнйи слэш
-        qDebug() << path;
-      }
+      // удаляем последнйи слэш
+      if (isDir) { path.chop(1);}
 
       QStringList pathList = path.split(QDir::separator());
-
-      qDebug() << pathList;
       QString fileName = pathList.takeLast().replace(":", QDir::separator());
       ZipItem * item;
       ZipItem * parent = pathsMap[pathList.join(QDir::separator())];
@@ -63,14 +57,6 @@ ZipModel::ZipModel(const QString &filePath, QObject *parent) :
 
       archive_read_data_skip(a);
     }
-
-    // Инициализировать статикой
-//    rootItem = new ZipItem("Корень", 0, true);
-//    ZipItem *innerDir = new ZipItem("Папка", 0, true, rootItem);
-//    rootItem->appendChild(innerDir);
-//    rootItem->appendChild(new ZipItem("Файл", 0, false, rootItem));
-//    innerDir->appendChild(new ZipItem("Вложенный файл", 0, false, innerDir));
-
 }
 
 void setupModel(QStringList files)
