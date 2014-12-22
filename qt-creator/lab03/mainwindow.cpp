@@ -1,12 +1,13 @@
 #include <QDebug>
 #include <QFileDialog>
 #include <QMdiSubWindow>
+#include <QTextEdit>
+#include <QtWidgets>
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "aboutdialog.h"
 #include "mdichild.h"
-#include <QTextEdit>
-#include <QtWidgets>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -30,7 +31,6 @@ void MainWindow::openFile()
     // Осталось добавить функцию разархивации :(
 
     ui->mdiArea->addSubWindow(child);
-    child->loadFile("/Users/DaZzz/Desktop");
     child->show();
     child->parentWidget()->resize(500, 500);
 }

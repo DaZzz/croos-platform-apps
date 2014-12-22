@@ -26,10 +26,16 @@ int ZipItem::childCount() const
     return childItems.count();
 }
 
+
 int ZipItem::columnCount() const
 {
     // Размер и имя
     return 2;
+}
+
+ZipItem *ZipItem::child(int row)
+{
+    return childItems.value(row);
 }
 
 int ZipItem::row() const
