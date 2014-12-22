@@ -19,9 +19,7 @@ ZipModel::ZipModel(const QString &filePath, QObject *parent) :
     a = archive_read_new();
     archive_read_support_filter_all(a);
     archive_read_support_format_all(a);
-
-//    r = archive_read_open_filename(a, filePathString, 10240);
-    r = archive_read_open_filename(a, "/Users/DaZzz/Desktop/folder.zip", 10240);
+    r = archive_read_open_filename(a, filePath.toStdString().c_str(), 10240);
 
     if (r != ARCHIVE_OK)
         qDebug() << "Archive is not ok!";

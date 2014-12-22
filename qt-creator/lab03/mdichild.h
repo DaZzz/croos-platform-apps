@@ -10,7 +10,7 @@ class MdiChild : public QWidget
 {
     Q_OBJECT
 public:
-    explicit MdiChild(QWidget *parent = 0);
+    explicit MdiChild(QString &filePath, QWidget *parent = 0);
 
 private:
     ZipModel *model;

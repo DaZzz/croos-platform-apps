@@ -10,10 +10,10 @@
 #include "mdichild.h"
 #include "zipmodel.h"
 
-MdiChild::MdiChild(QWidget *parent) :
+MdiChild::MdiChild(QString &filePath, QWidget *parent) :
     QWidget(parent)
 {
-    model = new ZipModel("");
+    model = new ZipModel(filePath);
 
     treeView = new QTreeView();
     treeView->setModel(model);

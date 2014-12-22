@@ -26,7 +26,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::openFile()
 {
-    MdiChild *child = new MdiChild;
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"),
+                                                     "",
+                                                     tr("Files (*.zip)"));
+    MdiChild *child = new MdiChild(fileName);
 
     // Осталось добавить функцию разархивации :(
 
