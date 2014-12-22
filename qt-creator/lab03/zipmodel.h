@@ -20,8 +20,19 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const;
     int columnCount(const QModelIndex &parent = QModelIndex()) const;
 
+    // Для редактирования
+    bool insertColumns(int position, int columns,
+                           const QModelIndex &parent = QModelIndex());
+    bool removeColumns(int position, int columns,
+                       const QModelIndex &parent = QModelIndex());
+    bool insertRows(int position, int rows,
+                    const QModelIndex &parent = QModelIndex());
+    bool removeRows(int position, int rows,
+                    const QModelIndex &parent = QModelIndex());
+
 private:
     ZipItem *rootItem;
+    ZipItem *getItem(const QModelIndex &index) const;
 };
 
 #endif // ZIPMODEL_H

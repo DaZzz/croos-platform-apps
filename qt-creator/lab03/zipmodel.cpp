@@ -186,3 +186,65 @@ bool ZipModel::setData(const QModelIndex &idx, const QVariant &value, int role)
     zitem->setName(value.toString());
     return true;
 }
+
+bool ZipModel::insertColumns(int position, int columns,
+                       const QModelIndex &parent)
+{
+    bool success;
+
+    beginInsertColumns(parent, position, position + columns - 1);
+    success = rootItem->insertColumns(position, columns);
+    endInsertColumns();
+
+    return success;
+}
+
+bool ZipModel::removeColumns(int position, int columns,
+                   const QModelIndex &parent)
+{
+    bool success;
+
+    beginRemoveColumns(parent, position, position + columns - 1);
+    success = rootItem->removeColumns(position, columns);
+    endRemoveColumns();
+
+    if (rootItem->columnCount() == 0)
+        removeRows(0, rowCount());
+
+    return success;
+}
+
+bool ZipModel::insertRows(int position, int rows,
+                const QModelIndex &parent)
+{
+    ZipItem *parentItem = getItem(parent);
+    bool success;
+
+    beginInsertRows(parent, position, position + rows - 1);
+    success = parentItem->insertChildren(position, rows, rootItem->columnCount());
+    endInsertRows();
+
+    return success;
+}
+
+bool ZipModel::removeRows(int position, int rows,
+                const QModelIndex &parent)
+{
+    ZipItem *parentItem = getItem(parent);
+    bool success = true;
+
+    beginRemoveRows(parent, position, position + rows - 1);
+    success = parentItem->removeChildren(position, rows);
+    endRemoveRows();
+
+    return success;
+}
+
+ZipItem *ZipModel::getItem(const QModelIndex &index) const
+{
+    if (index.isValid()) {
+         ZipItem *item = static_cast<ZipItem*>(index.internalPointer());
+         if (item) return item;
+     }
+     return rootItem;
+}

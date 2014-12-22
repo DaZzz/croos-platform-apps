@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 #include "aboutdialog.h"
+#include "mdichild.h"
 
 namespace Ui {
 class MainWindow;
@@ -20,12 +21,14 @@ public:
 private slots:
     void openFile();
     void openAboutDialog();
+    void closeAllWindows();
 
 private:
     void setupActions();
 
     Ui::MainWindow *ui;
     AboutDialog *aboutDialog;
+    QList<MdiChild *> mdiWindows;
 };
 
 #endif // MAINWINDOW_H

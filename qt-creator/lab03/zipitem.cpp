@@ -88,5 +88,63 @@ QVariant ZipItem::data(int column) const
     }
 }
 
+bool ZipItem::insertChildren(int position, int count, int columns)
+{
+//    if (position < 0 || position > childItems.size())
+//        return false;
 
+//    for (int row = 0; row < count; ++row) {
+//        QVariant data(columns);
+//        ZipItem *item = new ZipItem(data, this);
+//        childItems.insert(position, item);
+//    }
 
+//    return true;
+}
+
+bool ZipItem::insertColumns(int position, int columns)
+{
+//    if (position < 0 || position > itemData.size())
+//        return false;
+
+//    for (int column = 0; column < columns; ++column)
+//        itemData.insert(position, QVariant());
+
+//    foreach (ZipItem *child, childItems)
+//        child->insertColumns(position, columns);
+
+//    return true;
+}
+
+bool ZipItem::removeChildren(int position, int count)
+{
+    if (position < 0 || position + count > childItems.size())
+        return false;
+
+    for (int row = 0; row < count; ++row)
+        delete childItems.takeAt(position);
+
+    return true;
+}
+
+bool ZipItem::removeColumns(int position, int columns)
+{
+//    if (position < 0 || position + columns > itemData.size())
+//        return false;
+
+//    for (int column = 0; column < columns; ++column)
+//        itemData.remove(position);
+
+//    foreach (ZipItem *child, childItems)
+//        child->removeColumns(position, columns);
+
+//    return true;
+}
+
+int ZipItem::childNumber() const
+{
+    if (parentItem)
+        return parentItem->childItems.indexOf(const_cast<ZipItem*>(this));
+
+    return 0;
+}

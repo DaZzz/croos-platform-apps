@@ -29,9 +29,11 @@ void MainWindow::openFile()
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"),
                                                      "",
                                                      tr("Files (*.zip)"));
-    MdiChild *child = new MdiChild(fileName);
+    ui->windowsMenu->addAction(fileName);
+    ui->fileMenu->addAction(fileName);
 
-    // Осталось добавить функцию разархивации :(
+    MdiChild *child = new MdiChild(fileName);
+    mdiWindows.append(child);
 
     ui->mdiArea->addSubWindow(child);
     child->show();
@@ -43,9 +45,15 @@ void MainWindow::openAboutDialog()
     aboutDialog->exec();
 }
 
+void MainWindow::closeAllWindows()
+{
+    ui->mdiArea->closeAllSubWindows();
+}
+
 void MainWindow::setupActions()
 {
     connect(ui->openFileAction, SIGNAL(triggered()), this, SLOT(openFile()));
     connect(ui->showAboutAction, SIGNAL(triggered()), this, SLOT(openAboutDialog()));
+    connect(ui->closeAllWindowsAction, SIGNAL(triggered()), this, SLOT(closeAllWindows()));
 }
 
