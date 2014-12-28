@@ -9,8 +9,16 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
     canvas = new Canvas();
-    ui->scrollArea->setWidget(canvas);
+    canvas->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+
+    ui->scrollArea->setBackgroundRole(QPalette::Dark);
+    canvas->setBackgroundRole(QPalette::Light);
+
+    QGridLayout *layout = new QGridLayout;
+    layout->addWidget(canvas);
+    ui->scrollAreaWidgetContents->setLayout(layout);
 }
 
 MainWindow::~MainWindow()

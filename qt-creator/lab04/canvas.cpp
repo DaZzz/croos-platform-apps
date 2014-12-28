@@ -116,6 +116,7 @@ void Canvas::paintEvent(QPaintEvent *)
 void Canvas::setNewImage(const QImage &image)
 {
     this->image = image;
+    setMinimumSize(image.width(), image.height());
 }
 
 void Canvas::applySchar()
@@ -148,13 +149,14 @@ void Canvas::applySchar()
 
     // Total Gradient (approximate)
     addWeighted( abs_grad_x, 0.5, abs_grad_y, 0.5, 0, grad );
+
+    cvtColor( grad, grad, CV_GRAY2RGB);
+
     image = cvMatToQImage(grad);
 }
 
 void Canvas::drawImage()
 {
     QPainter painter(this);
-    pixmap.fill(Qt::white);
-    painter.drawPixmap(0, 0, pixmap);
     painter.drawImage(0, 0, image);
 }
