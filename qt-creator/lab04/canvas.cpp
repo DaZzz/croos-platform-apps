@@ -4,6 +4,8 @@
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 
+using namespace cv;
+
 QImage  cvMatToQImage( const cv::Mat &inMat )
    {
       switch ( inMat.type() )
@@ -11,8 +13,7 @@ QImage  cvMatToQImage( const cv::Mat &inMat )
          // 8-bit, 4 channel
          case CV_8UC4:
          {
-            QImage image( inMat.data, inMat.cols, inMat.rows, inMat.step, QImage::Format_RGB32 );
-
+            QImage image( inMat.data, inMat.cols, inMat.rows, inMat.step, QImage::Format_ARGB32 );
             return image;
          }
 
@@ -119,10 +120,35 @@ void Canvas::setNewImage(const QImage &image)
 
 void Canvas::applySchar()
 {
-    cv::Mat mat;
-    mat = QImageToCvMat(image, false);
-    image = cvMatToQImage(mat);
-    repaint();
+    Mat src, src_gray;
+    Mat grad;
+    int scale = 1;
+    int delta = 0;
+    int ddepth = CV_16S;
+
+    // Load an image
+    src = QImageToCvMat(image, true);
+
+    if( !src.data )
+    { return; }
+
+    cvtColor( src, src_gray, CV_RGB2GRAY );
+
+    // Generate grad_x and grad_y
+    Mat grad_x, grad_y;
+    Mat abs_grad_x, abs_grad_y;
+
+    // Gradient X
+    Scharr( src_gray, grad_x, ddepth, 1, 0, scale, delta, BORDER_DEFAULT );
+    convertScaleAbs( grad_x, abs_grad_x );
+
+    // Gradient Y
+    Scharr( src_gray, grad_y, ddepth, 0, 1, scale, delta, BORDER_DEFAULT );
+    convertScaleAbs( grad_y, abs_grad_y );
+
+    // Total Gradient (approximate)
+    addWeighted( abs_grad_x, 0.5, abs_grad_y, 0.5, 0, grad );
+    image = cvMatToQImage(grad);
 }
 
 void Canvas::drawImage()
