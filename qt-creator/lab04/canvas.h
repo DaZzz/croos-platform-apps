@@ -22,9 +22,8 @@ protected:
     void paintEvent(QPaintEvent *);
 
 public slots:
-    void setNewImage(QString &filePath);
+    void setNewImage(const QImage &image);
     void applySchar();
-
 };
 
 #endif // CANVAS_H

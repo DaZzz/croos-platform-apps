@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     canvas = new Canvas();
-    ui->centralWidget->layout()->addWidget(canvas);
+    ui->scrollArea->setWidget(canvas);
 }
 
 MainWindow::~MainWindow()
@@ -23,5 +23,13 @@ void MainWindow::on_actionOpen_triggered()
     QString filePath = QFileDialog::getOpenFileName(this, tr("Open File"),
                                                          "",
                                                          tr("Files (*.jpg *png)"));
-    canvas->setNewImage(filePath);
+
+    canvas->setNewImage(QImage(filePath));
+    canvas->repaint();
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    canvas->applySchar();
+    canvas->repaint();
 }
