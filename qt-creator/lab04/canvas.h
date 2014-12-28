@@ -10,7 +10,9 @@ class Canvas : public QWidget
 
 private:
     QPixmap pixmap;
-    QImage *image;
+    QImage image;
+
+    void drawImage();
 
 public:
     explicit Canvas(QWidget *parent = 0);
@@ -20,7 +22,7 @@ protected:
     void paintEvent(QPaintEvent *);
 
 public slots:
-    void setNewImage();
+    void setNewImage(QString &filePath);
     void applySchar();
 
 };

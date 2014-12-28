@@ -18,11 +18,10 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QImage *image;
     Canvas *canvas;
 
-public slots:
-    void openImage();
+private slots:
+    void on_actionOpen_triggered();
 };
 
 #endif // MAINWINDOW_H
