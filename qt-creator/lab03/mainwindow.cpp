@@ -30,7 +30,9 @@ void MainWindow::openFile()
                                                      "",
                                                      tr("Files (*.zip)"));
     ui->windowsMenu->addAction(fileName);
-    ui->fileMenu->addAction(fileName);
+
+    QAction *a = new QAction(fileName, ui->fileMenu);
+    ui->fileMenu->insertAction(a, ui->fileMenu->actions().last());
 
     MdiChild *child = new MdiChild(fileName);
     mdiWindows.append(child);

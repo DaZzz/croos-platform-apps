@@ -3,21 +3,21 @@
 
 #include <QWidget>
 #include <QTreeView>
-#include "editablefilesystemmodel.h"
+
+#include "zipmodel.h"
 
 class MdiChild : public QWidget
 {
     Q_OBJECT
 public:
-    explicit MdiChild(QWidget *parent = 0);
-    void loadFile(QString filePath);
+    explicit MdiChild(QString &filePath, QWidget *parent = 0);
 
 private:
+    ZipModel *model;
+
     void createActions();
 
-    EditableFileSystemModel *model;
     QTreeView *treeView;
-
     QAction *removeAction;
     QAction *addFileAction;
     QAction *addDirAction;

@@ -6,22 +6,18 @@ project(lab03)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 # Turn on automatic invocation of the MOC
-set(CMAKE_AUTOMOC ON)
+qt5_wrap_cpp(
+  MOC_WRAPPERS
+  main.h
+  mainwindow.h
+  mdichild.h
+  aboutdialog.h
+  zipitem.h
+  zipmodel.h
+  )
 
-# Cmake prefix for Qt5
-# set(CMAKE_PREFIX_PATH "/Users/DaZzz/Qt/5.3/clang_64/")
-
-
-# There may be a way to tell up front if Qt5 is going to be found, but I haven't found
-# a foolproof way to do it yet, so settle for the default error message for now.
-#if(NOT CMAKE_PREFIX_PATH AND NOT Qt5Widgets_DIR)
-#    message(WARNING "CMAKE_PREFIX_PATH is not defined, so find_package may not work. Set the CMAKE_PREFIX_PATH "
-#            "environment variable to the install prefix of Qt 5, either on the command line as "
-#            "-DCMAKE_PREFIX_PATH=\"path/to/Qt5/lib/cmake\" or with set(CMAKE_PREFIX_PATH path/to/Qt5/lib/cmake)")
-#endif(NOT CMAKE_PREFIX_PATH AND NOT Qt5Widgets_DIR)
-
-# Add a compiler flag
-# set(CMAKE_CXX_FLAGS "-std=c++0x -stdlib=libc++ -g3 -Wall -O0")
+find_package(libarchive REQUIRED)
+include_directories(${LIBARCHIVE_INCLUDES})
 
 # Find the QtWidgets library
 find_package(Qt5Widgets REQUIRED)
@@ -41,13 +37,13 @@ if(WIN32)
 endif()
 
 # Tell CMake to create the helloworld executable
-add_executable(lab03 ${gui_type} main.cpp mainwindow.cpp aboutdialog.cpp editablefilesystemmodel.cpp mdichild.cpp ${UI_HEADERS} ${QRCS} ${QM})
+add_executable(lab03 ${gui_type} main.cpp mainwindow.cpp mdichild.cpp  aboutdialog.cpp zipitem.cpp zipmodel.cpp ${UI_HEADERS} ${QRCS} ${QM})
 
 # Add the Qt5 Widgets for linking
-target_link_libraries(lab03 Qt5::Widgets)
+target_link_libraries(lab03 Qt5::Widgets ${LIBARCHIVE_INCLUDES})
 
 
-# Installation
+Installation
 install(
   TARGETS lab03
   RUNTIME DESTINATION bin)

@@ -32,9 +32,21 @@
         <translation>Windows</translation>
     </message>
     <message>
+        <source>Еще</source>
+        <translation type="vanished">More</translation>
+    </message>
+    <message>
+        <source>Пункт А</source>
+        <translation type="vanished">Item A</translation>
+    </message>
+    <message>
         <location filename="mainwindow.ui" line="60"/>
         <source>Справка</source>
         <translation>Help</translation>
+    </message>
+    <message>
+        <source>&amp;Еще</source>
+        <translation type="vanished">&amp;More</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="71"/>
@@ -43,8 +55,9 @@
     </message>
     <message>
         <location filename="mainwindow.ui" line="76"/>
-        <source>Выход</source>
-        <translation>Quit</translation>
+        <source>Завершить</source>
+        <oldsource>Выйти</oldsource>
+        <translation>Close</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="81"/>
@@ -54,51 +67,82 @@
     </message>
     <message>
         <location filename="mainwindow.ui" line="89"/>
-        <source>О программе</source>
-        <translation>About program</translation>
+        <source>Информация</source>
+        <oldsource>Инфо</oldsource>
+        <translation type="unfinished">Information</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="94"/>
+        <source>&amp;Пункт а</source>
+        <translation>&amp;Item A</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="29"/>
+        <source>Open File</source>
+        <translation type="unfinished">Open File</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="31"/>
+        <source>Files (*.zip)</source>
+        <translation type="unfinished">Files (*.zip)</translation>
     </message>
 </context>
 <context>
     <name>MdiChild</name>
     <message>
-        <location filename="mdichild.cpp" line="93"/>
+        <location filename="mdichild.cpp" line="39"/>
         <source>&amp;Контекстное меню</source>
         <translation>&amp;Context menu</translation>
     </message>
     <message>
-        <location filename="mdichild.cpp" line="108"/>
+        <location filename="mdichild.cpp" line="54"/>
         <source>&amp;Удалить</source>
         <translation>&amp;Remove</translation>
     </message>
     <message>
-        <location filename="mdichild.cpp" line="110"/>
+        <location filename="mdichild.cpp" line="56"/>
         <source>&amp;Создать каталог</source>
         <translation>&amp;Create directory</translation>
     </message>
     <message>
-        <location filename="mdichild.cpp" line="112"/>
+        <location filename="mdichild.cpp" line="58"/>
         <source>&amp;Добавить существующий каталог</source>
         <translation>&amp;Add directory</translation>
     </message>
     <message>
-        <location filename="mdichild.cpp" line="114"/>
+        <location filename="mdichild.cpp" line="60"/>
         <source>&amp;Добавить файл</source>
         <translation>&amp;Add file</translation>
     </message>
     <message>
-        <location filename="mdichild.cpp" line="165"/>
         <source>Добавить каталог</source>
-        <translation>Add directory</translation>
+        <translation type="vanished">Add directory</translation>
     </message>
     <message>
-        <location filename="mdichild.cpp" line="189"/>
         <source>Добавить файл</source>
-        <translation>Add file</translation>
+        <translation type="vanished">Add file</translation>
     </message>
     <message>
-        <location filename="mdichild.cpp" line="191"/>
         <source>Файл (*.*)</source>
-        <translation>FIle (*.*)</translation>
+        <translation type="vanished">FIle (*.*)</translation>
+    </message>
+</context>
+<context>
+    <name>ZipModel</name>
+    <message>
+        <location filename="zipmodel.cpp" line="13"/>
+        <source>Корень</source>
+        <translation type="unfinished">Root</translation>
+    </message>
+    <message>
+        <location filename="zipmodel.cpp" line="168"/>
+        <source>Имя</source>
+        <translation type="unfinished">Name</translation>
+    </message>
+    <message>
+        <location filename="zipmodel.cpp" line="171"/>
+        <source>Размер</source>
+        <translation type="unfinished">Size</translation>
     </message>
 </context>
 </TS>

@@ -531,7 +531,7 @@
 			"file": "sources/CMakeLists.txt",
 			"settings":
 			{
-				"buffer_size": 1889,
+				"buffer_size": 1307,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,7 +539,7 @@
 			"file": "sources/main.cpp",
 			"settings":
 			{
-				"buffer_size": 460,
+				"buffer_size": 452,
 				"line_ending": "Unix"
 			}
 		}
@@ -789,12 +789,13 @@
 	],
 	"file_history":
 	[
+		"/Users/DaZzz/Developer/qt/projects/lab03/sources/lab03_en_US.qm",
+		"/Users/DaZzz/Developer/qt/projects/lab03/sources/lab03.pro",
 		"/usr/local/Cellar/cmake/3.0.0/share/cmake/Modules/DeployQt4.cmake",
 		"/Users/DaZzz/Developer/qt/projects/lab03/sources/CMakeLists.txt",
 		"/Users/DaZzz/Developer/qt/projects/lab03/sources/main.cpp",
 		"/Users/DaZzz/Developer/qt/projects/lab03/build/lab03",
 		"/Users/DaZzz/Developer/qt/.git/COMMIT_EDITMSG",
-		"/Users/DaZzz/Developer/qt/projects/lab03/sources/lab03.pro",
 		"/Users/DaZzz/Developer/qt/projects/lab02/sources/aboutdialog.h",
 		"/Users/DaZzz/Developer/qt/projects/lab02/sources/mainwindow.h",
 		"/Users/DaZzz/Developer/qt/projects/lab02/sources/canvas.cpp",
@@ -915,8 +916,7 @@
 		"/Users/DaZzz/Developer/web-workspace/smartomato/manager/node_modules/grunt-rsync/node_modules/rsyncwrapper/tests/remote-dest.js",
 		"/Users/DaZzz/Developer/web-workspace/smartomato/manager/node_modules/bower/node_modules/bower-registry-client/node_modules/bower-config/node_modules/mout/object/deepEquals.js",
 		"/Users/DaZzz/Developer/web-workspace/smartomato/manager/app/routes/deliveryRoute.coffee",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/manager/app/templates/application.emblem",
-		"/Users/DaZzz/Developer/web-workspace/smartomato/manager/node_modules/rsync/b/a.txt"
+		"/Users/DaZzz/Developer/web-workspace/smartomato/manager/app/templates/application.emblem"
 	],
 	"find":
 	{
@@ -967,6 +967,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cpp",
 			"MAIN-WINDOW_H",
 			"choose-courier",
 			"isNew",
@@ -1093,8 +1094,7 @@
 			"}",
 			"{",
 			"invite",
-			":",
-			"text"
+			":"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1150,15 +1150,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1889,
+						"buffer_size": 1307,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1571,
-								1571
+								226,
+								226
 							]
 						],
 						"settings":
@@ -1168,7 +1168,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 611.0,
+						"translation.y": 551.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1180,15 +1180,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 460,
+						"buffer_size": 452,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								459,
-								459
+								0,
+								0
 							]
 						],
 						"settings":

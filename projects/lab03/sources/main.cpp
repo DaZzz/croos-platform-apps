@@ -7,16 +7,14 @@
 int main(int argc, char *argv[])
 {
 
-    QApplication a(argc, argv);
-
+    QApplication app(argc, argv);
     QString locale = QLocale::system().name();
     QTranslator translator;
-    qDebug() << "Locale:" << locale;
-    qDebug() << "Translation found:" << translator.load("lab03_" + locale);
-    a.installTranslator(&translator);
+    translator.load(QString("/Users/DaZzz/Developer/qt/qt-creator/lab03/lab03_") + locale + ".qm");
+    app.installTranslator(&translator);
 
     MainWindow w;
     w.show();
 
-    return a.exec();
+    return app.exec();
 }

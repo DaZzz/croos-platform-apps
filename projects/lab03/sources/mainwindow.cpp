@@ -1,12 +1,13 @@
 #include <QDebug>
 #include <QFileDialog>
 #include <QMdiSubWindow>
+#include <QTextEdit>
+#include <QtWidgets>
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "aboutdialog.h"
 #include "mdichild.h"
-#include <QTextEdit>
-#include <QtWidgets>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -25,12 +26,18 @@ MainWindow::~MainWindow()
 
 void MainWindow::openFile()
 {
-    MdiChild *child = new MdiChild;
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"),
+                                                     "",
+                                                     tr("Files (*.zip)"));
+    ui->windowsMenu->addAction(fileName);
 
-    // Осталось добавить функцию разархивации :(
+    QAction *a = new QAction(fileName, ui->fileMenu);
+    ui->fileMenu->insertAction(a, ui->fileMenu->actions().last());
+
+    MdiChild *child = new MdiChild(fileName);
+    mdiWindows.append(child);
 
     ui->mdiArea->addSubWindow(child);
-    child->loadFile("/Users/DaZzz/Desktop");
     child->show();
     child->parentWidget()->resize(500, 500);
 }
@@ -40,9 +47,15 @@ void MainWindow::openAboutDialog()
     aboutDialog->exec();
 }
 
+void MainWindow::closeAllWindows()
+{
+    ui->mdiArea->closeAllSubWindows();
+}
+
 void MainWindow::setupActions()
 {
     connect(ui->openFileAction, SIGNAL(triggered()), this, SLOT(openFile()));
     connect(ui->showAboutAction, SIGNAL(triggered()), this, SLOT(openAboutDialog()));
+    connect(ui->closeAllWindowsAction, SIGNAL(triggered()), this, SLOT(closeAllWindows()));
 }
 
