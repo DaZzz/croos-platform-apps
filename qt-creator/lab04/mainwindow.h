@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include "canvas.h"
 
+class WorkerThread;
+
 namespace Ui {
 class MainWindow;
 }
@@ -19,10 +21,14 @@ public:
 private:
     Ui::MainWindow *ui;
     Canvas *canvas;
+    WorkerThread *m_pThreadWork;
 
 private slots:
     void on_actionOpen_triggered();
-    void on_pushButton_clicked();
+
+    void onThreadStarted();
+    void onThreadFinished();
+    void on_scharrButton_clicked();
 };
 
 #endif // MAINWINDOW_H

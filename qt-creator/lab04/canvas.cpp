@@ -26,6 +26,11 @@ void Canvas::applySchar()
 
 }
 
+const QImage &Canvas::getImage() const
+{
+    return this->image;
+}
+
 void Canvas::drawImage()
 {
     QPainter painter(this);

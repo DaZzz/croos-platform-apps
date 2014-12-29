@@ -16,6 +16,7 @@ private:
 
 public:
     explicit Canvas(QWidget *parent = 0);
+    const  QImage &getImage() const;
 
 protected:
     void resizeEvent(QResizeEvent *event);

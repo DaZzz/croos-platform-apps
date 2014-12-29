@@ -14,12 +14,8 @@ public:
 
     const QImage *getResultImage() const;
 
-signals:
-    void canceled();
-
 public slots:
     void startScharr(const QImage &image);
-    void stop();
 
 private:
 

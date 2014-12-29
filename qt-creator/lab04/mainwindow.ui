@@ -45,24 +45,17 @@
           </size>
          </property>
          <property name="title">
-          <string>Фильтры</string>
+          <string>Filters</string>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item alignment="Qt::AlignTop">
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="scharrButton">
             <property name="text">
              <string>Schar</string>
             </property>
            </widget>
           </item>
          </layout>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_2">
-         <property name="text">
-          <string>Cancel</string>
-         </property>
         </widget>
        </item>
       </layout>

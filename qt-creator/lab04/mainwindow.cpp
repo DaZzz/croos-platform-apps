@@ -3,6 +3,7 @@
 #include "canvas.h"
 #include <QFileDialog>
 #include <QDebug>
+#include "workerthread.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -19,11 +20,36 @@ MainWindow::MainWindow(QWidget *parent) :
     QGridLayout *layout = new QGridLayout;
     layout->addWidget(canvas);
     ui->scrollAreaWidgetContents->setLayout(layout);
+
+    m_pThreadWork = new WorkerThread(this);
+    connect(
+        m_pThreadWork, SIGNAL(started()),
+        this, SLOT(onThreadStarted()));
+      connect(
+        m_pThreadWork, SIGNAL(finished()),
+        this, SLOT(onThreadFinished()));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::onThreadStarted()
+{
+    ui->scharrButton->setEnabled(false);
+}
+
+void MainWindow::onThreadFinished()
+{
+    ui->scharrButton->setEnabled(true);
+    const QImage *pcImage = m_pThreadWork->getResultImage();
+    if (pcImage)
+    {
+        canvas->setNewImage(*pcImage);
+        canvas->repaint();
+    }
+
 }
 
 void MainWindow::on_actionOpen_triggered()
@@ -36,8 +62,7 @@ void MainWindow::on_actionOpen_triggered()
     canvas->repaint();
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_scharrButton_clicked()
 {
-    canvas->applySchar();
-    canvas->repaint();
+    m_pThreadWork->startScharr(canvas->getImage());
 }

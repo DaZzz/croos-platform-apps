@@ -131,6 +131,7 @@ void WorkerThread::run()
 {
     if (m_ptrInput)
     {
+        QThread::sleep(1);
         cv::Mat src, src_gray;
         cv::Mat grad;
         int scale = 1;
@@ -166,7 +167,3 @@ void WorkerThread::run()
     }
 }
 
-void WorkerThread::stop()
-{
-    requestInterruption();
-}
