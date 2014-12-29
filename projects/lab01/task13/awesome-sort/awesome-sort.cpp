@@ -35,6 +35,26 @@ void insertion_sort(std::vector<int> &v)
   }
 }
 
+// Select Sort
+void select_sort(std::vector<int> &v)
+{
+  for(int i = 0; i < v.size(); ++i)
+  {
+    int k = i;
+    int x = v[i];
+
+    for(int j=i+1; j < v.size(); ++j)
+      if (v[j] < x)
+      {
+        k = j;
+        x = v[j];
+      }
+
+    v[k] = v[i];
+    v[i] = x;
+  }
+}
+
 // Quick Sort
 void _quick_sort(std::vector<int> &v, int first, int last)
 {
@@ -44,7 +64,8 @@ void _quick_sort(std::vector<int> &v, int first, int last)
         while (v[i] < x) i++;
         while (v[j] > x) j--;
 
-        if(i <= j) {
+        if(i <= j)
+        {
             if (v[i] > v[j])
             {
               int temp = v[j];

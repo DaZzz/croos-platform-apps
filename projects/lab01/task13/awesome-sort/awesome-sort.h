@@ -3,13 +3,16 @@
 
 #include <vector>
 
-// Swap Sort Function for Asscending Order
+// Swap Sort
 void swap_sort(std::vector <int> &v);
 
-// Insertion Sort Function for Asscending Order
+// Insertion Sort
 void insertion_sort(std::vector<int> &v);
 
-// Quick Sort Function for Asscending Order
+// Quick Sort
 void quick_sort(std::vector<int> &v);
+
+// Select Sort
+void select_sort(std::vector<int> &v);
 
 #endif
