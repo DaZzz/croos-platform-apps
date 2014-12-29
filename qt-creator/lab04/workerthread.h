@@ -22,6 +22,7 @@ public slots:
     void stop();
 
 private:
+
     MainWindow *m_pWindow;
     QScopedPointer <QImage> m_ptrInput, m_ptrResult;
     virtual void run();
