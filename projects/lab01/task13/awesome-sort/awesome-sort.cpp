@@ -1,6 +1,6 @@
 #include "awesome-sort.h"
 
-// Swap Sort Function for Asscending Order
+// Swap Sort
 void swap_sort(std::vector <int> &v)
 {
   int vLength = v.size();
@@ -16,10 +16,9 @@ void swap_sort(std::vector <int> &v)
       }
     }
   }
-  return;
 }
 
-// Insertion Sort Function for Asscending Order
+// Insertion Sort
 void insertion_sort(std::vector<int> &v)
 {
   int vLength = v.size();
@@ -34,5 +33,36 @@ void insertion_sort(std::vector<int> &v)
     }
     v[j+1] = x;
   }
-  return;
+}
+
+// Quick Sort
+void _quick_sort(std::vector<int> &v, int first, int last)
+{
+    int i = first, j = last, x = v[(first + last) / 2];
+
+    do {
+        while (v[i] < x) i++;
+        while (v[j] > x) j--;
+
+        if(i <= j) {
+            if (v[i] > v[j])
+            {
+              int temp = v[j];
+              v[j] = v[j+1];
+              v[j+1] = temp;
+            }
+            i++;
+            j--;
+        }
+    } while (i <= j);
+
+    if (i < last)
+        _quick_sort(v, i, last);
+    if (first < j)
+        _quick_sort(v, first, j);
+}
+
+void quick_sort(std::vector<int> &v)
+{
+  _quick_sort(v, 0, v.size() - 1);
 }

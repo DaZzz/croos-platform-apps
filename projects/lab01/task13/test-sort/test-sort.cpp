@@ -11,8 +11,9 @@ int main()
     std::cout << v[i] << " ";
   std::cout << std::endl;
 
-  swap_sort(v);
-  insertion_sort(v);
+  //swap_sort(v);
+  //insertion_sort(v);
+  quick_sort(v);
 
   for(int i = 0; i < v.size(); ++i)
     std::cout << v[i] << " ";

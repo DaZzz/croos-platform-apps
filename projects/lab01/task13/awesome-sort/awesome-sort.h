@@ -9,4 +9,7 @@ void swap_sort(std::vector <int> &v);
 // Insertion Sort Function for Asscending Order
 void insertion_sort(std::vector<int> &v);
 
+// Quick Sort Function for Asscending Order
+void quick_sort(std::vector<int> &v);
+
 #endif

@@ -1,0 +1,18 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "/Users/DaZzz/Developer/qt/projects/lab01"
+		}
+	],
+  "build_systems":
+  [
+      {
+          "path": "/usr/local/bin:/usr/bin:/bin",
+          "working_dir": "${project_path}",
+          "name": "Shell Build Script",
+          "cmd": ["sh", "$project_path/_build/build.sh"]
+      }
+  ]
+}

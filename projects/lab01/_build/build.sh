@@ -1,1 +1,2 @@
-make -C ".."
+make
+./_build/test-sort
