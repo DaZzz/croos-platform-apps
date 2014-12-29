@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="lab04" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\Qt\;CMake Files\..\..\..\..\Qt\5.3\;CMake Files\..\..\..\..\Qt\5.3\clang_64\;CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\;CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\;CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\..\usr\local\share\OpenCV\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/Users/DaZzz/Developer/qt/projects/lab04-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/Users/DaZzz/Developer/qt/projects/lab04-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="lab04">
+         <Option output="/Users/DaZzz/Developer/qt/projects/lab04-build/lab04" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/DaZzz/Developer/qt/projects/lab04-build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_WIDGETS_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1" />
+            <Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.0/include" />
+            <Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks/OpenGL.framework/Headers" />
+            <Add directory="/Users/DaZzz/Developer/qt/projects/lab04" />
+            <Add directory="/Users/DaZzz/Developer/qt/projects/lab04-build" />
+            <Add directory="/Users/DaZzz/Qt/5.3/clang_64/lib/QtCore.framework" />
+            <Add directory="/Users/DaZzz/Qt/5.3/clang_64/lib/QtCore.framework/Headers" />
+            <Add directory="/Users/DaZzz/Qt/5.3/clang_64/lib/QtGui.framework" />
+            <Add directory="/Users/DaZzz/Qt/5.3/clang_64/lib/QtGui.framework/Headers" />
+            <Add directory="/Users/DaZzz/Qt/5.3/clang_64/lib/QtWidgets.framework" />
+            <Add directory="/Users/DaZzz/Qt/5.3/clang_64/lib/QtWidgets.framework/Headers" />
+            <Add directory="/Users/DaZzz/Qt/5.3/clang_64/mkspecs/macx-clang" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/opencv" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 lab04" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="lab04/fast">
+         <Option output="/Users/DaZzz/Developer/qt/projects/lab04-build/lab04" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/DaZzz/Developer/qt/projects/lab04-build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_WIDGETS_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1" />
+            <Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.0/include" />
+            <Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks/OpenGL.framework/Headers" />
+            <Add directory="/Users/DaZzz/Developer/qt/projects/lab04" />
+            <Add directory="/Users/DaZzz/Developer/qt/projects/lab04-build" />
+            <Add directory="/Users/DaZzz/Qt/5.3/clang_64/lib/QtCore.framework" />
+            <Add directory="/Users/DaZzz/Qt/5.3/clang_64/lib/QtCore.framework/Headers" />
+            <Add directory="/Users/DaZzz/Qt/5.3/clang_64/lib/QtGui.framework" />
+            <Add directory="/Users/DaZzz/Qt/5.3/clang_64/lib/QtGui.framework/Headers" />
+            <Add directory="/Users/DaZzz/Qt/5.3/clang_64/lib/QtWidgets.framework" />
+            <Add directory="/Users/DaZzz/Qt/5.3/clang_64/lib/QtWidgets.framework/Headers" />
+            <Add directory="/Users/DaZzz/Qt/5.3/clang_64/mkspecs/macx-clang" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/opencv" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 lab04/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/Users/DaZzz/Developer/qt/projects/lab04-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/DaZzz/Developer/qt/projects/lab04-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/canvas.cpp">
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/main.cpp">
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/mainwindow.cpp">
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/workerthread.cpp">
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/canvas.h">
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/mainwindow.h">
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/mainwindow.ui">
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/workerthread.h">
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Widgets/Qt5Widgets_AccessibleFactory.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QCocoaIntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QDDSPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QJp2Plugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QMngPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../Qt/5.3/clang_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.3\clang_64\lib\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\OpenCV\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../../../usr/local/share/OpenCV/OpenCVConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\OpenCV\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../../../usr/local/share/OpenCV/OpenCVModules.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\OpenCV\" />
+      </Unit>
+      <Unit filename="/Users/DaZzz/Developer/qt/projects/lab04/../../../../../../usr/local/share/OpenCV/OpenCVModules-none.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\OpenCV\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

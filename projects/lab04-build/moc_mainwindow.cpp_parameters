@@ -1,0 +1,7 @@
+-I/usr/local/include/opencv
+-I/usr/local/include
+-I/Users/DaZzz/Developer/qt/projects/lab04
+-I/Users/DaZzz/Developer/qt/projects/lab04-build
+-o
+/Users/DaZzz/Developer/qt/projects/lab04-build/moc_mainwindow.cpp
+/Users/DaZzz/Developer/qt/projects/lab04/mainwindow.h

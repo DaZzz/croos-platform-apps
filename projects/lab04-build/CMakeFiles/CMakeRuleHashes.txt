@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+1fbe959f4c4be976113517c3b92ae002 moc_canvas.cpp
+2fbed08a3201677b354deb2d96d07c9d moc_mainwindow.cpp
+d68b15ed75b9a41a23a644d618b8fc4f moc_workerthread.cpp
+57bd2a3b943de291098c76dbe8fd52c8 ui_mainwindow.h
