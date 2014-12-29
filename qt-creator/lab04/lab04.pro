@@ -15,10 +15,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    canvas.cpp
+    canvas.cpp \
+    workerthread.cpp
 
 HEADERS  += mainwindow.h \
-    canvas.h
+    canvas.h \
+    workerthread.h
 
 FORMS    += mainwindow.ui
 
