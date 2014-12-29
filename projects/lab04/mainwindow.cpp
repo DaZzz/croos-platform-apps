@@ -10,15 +10,15 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-    canvas = new Canvas();
-    canvas->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-
     ui->scrollArea->setBackgroundRole(QPalette::Dark);
-    canvas->setBackgroundRole(QPalette::Light);
+
+    m_pCanvas = new Canvas();
+    m_pCanvas->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    m_pCanvas->setBackgroundRole(QPalette::Light);
+
 
     QGridLayout *layout = new QGridLayout;
-    layout->addWidget(canvas);
+    layout->addWidget(m_pCanvas);
     ui->scrollAreaWidgetContents->setLayout(layout);
 
     m_pThreadWork = new WorkerThread(this);
@@ -46,8 +46,8 @@ void MainWindow::onThreadFinished()
     const QImage *pcImage = m_pThreadWork->getResultImage();
     if (pcImage)
     {
-        canvas->setNewImage(*pcImage);
-        canvas->repaint();
+        m_pCanvas->setNewImage(*pcImage);
+        m_pCanvas->repaint();
     }
 
 }
@@ -56,13 +56,13 @@ void MainWindow::on_actionOpen_triggered()
 {
     QString filePath = QFileDialog::getOpenFileName(this, tr("Open File"),
                                                          "",
-                                                         tr("Files (*.jpg *png)"));
+                                                         tr("Files (*.jpg *.jpeg *.png)"));
 
-    canvas->setNewImage(QImage(filePath));
-    canvas->repaint();
+    m_pCanvas->setNewImage(QImage(filePath));
+    m_pCanvas->repaint();
 }
 
 void MainWindow::on_scharrButton_clicked()
 {
-    m_pThreadWork->startScharr(canvas->getImage());
+    m_pThreadWork->startScharr(m_pCanvas->getImage());
 }

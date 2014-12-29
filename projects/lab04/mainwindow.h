@@ -5,6 +5,7 @@
 #include "canvas.h"
 
 class WorkerThread;
+class Canvas;
 
 namespace Ui {
 class MainWindow;
@@ -20,7 +21,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    Canvas *canvas;
+    Canvas *m_pCanvas;
     WorkerThread *m_pThreadWork;
 
 private slots:

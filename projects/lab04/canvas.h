@@ -9,7 +9,6 @@ class Canvas : public QWidget
     Q_OBJECT
 
 private:
-    QPixmap pixmap;
     QImage image;
 
     void drawImage();
@@ -17,14 +16,11 @@ private:
 public:
     explicit Canvas(QWidget *parent = 0);
     const  QImage &getImage() const;
+    void setNewImage(const QImage &image);
 
 protected:
-    void resizeEvent(QResizeEvent *event);
     void paintEvent(QPaintEvent *);
 
-public slots:
-    void setNewImage(const QImage &image);
-    void applySchar();
 };
 
 #endif // CANVAS_H
