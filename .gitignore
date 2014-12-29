@@ -3,3 +3,5 @@
 *.o
 **/build-*
 **/numbers.txt
+**/cmake-build
+**/make-build

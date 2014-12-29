@@ -1,1 +1,0 @@
-/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/test-sort.dir/test-sort.cpp.o  -o test-sort  ../awesome-sort/libawesome-sort.a 

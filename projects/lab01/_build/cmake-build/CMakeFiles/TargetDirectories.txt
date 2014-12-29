@@ -1,2 +1,0 @@
-/Users/DaZzz/Developer/qt/projects/lab01/_build/cmake-build/awesome-sort/CMakeFiles/awesome-sort.dir
-/Users/DaZzz/Developer/qt/projects/lab01/_build/cmake-build/test-sort/CMakeFiles/test-sort.dir

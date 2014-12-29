@@ -3,6 +3,7 @@
 #include <vector>
 #include <algorithm>
 #include <cstdlib>
+#include <cstdio>
 #include <ctime>
 #include <string>
 
@@ -69,6 +70,17 @@ int main()
   test_sort(&insertion_sort, "Insert sort: ");
   test_sort(&quick_sort, "Quick sort: ");
   test_sort(&select_sort, "Select sort: ");
+
+  // Cleaning
+  if (!std::remove(FILE_NAME))
+  {
+    std::cout << "Removed supporting files." << std::endl;
+  }
+  else
+  {
+    std::cerr << "Error during the deletion." << std::endl;
+  }
+
 
   return 0;
 }

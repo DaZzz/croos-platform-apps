@@ -1,2 +1,0 @@
-/usr/bin/ar cr libawesome-sort.a  CMakeFiles/awesome-sort.dir/awesome-sort.cpp.o
-/usr/bin/ranlib libawesome-sort.a
