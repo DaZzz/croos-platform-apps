@@ -8,7 +8,7 @@
 
 #include "awesome-sort.h"
 
-#define VECTOR_SIZE 10000
+#define VECTOR_SIZE 15000
 #define FILE_NAME "numbers.txt"
 
 void test_sort(void (*sort_function)(std::vector<int>&), const std::string &label)
@@ -64,10 +64,11 @@ int main()
   std::cout << "#         Start testing        #" << std::endl;
   std::cout << "################################" << std::endl;
   std::cout << "Amount of elements: " << VECTOR_SIZE << std::endl;
-  test_sort(&swap_sort, "Swap sort time: ");
-  test_sort(&insertion_sort, "Insert sort time: ");
-  test_sort(&quick_sort, "Quick sort time: ");
-  test_sort(&select_sort, "Select sort time: ");
+
+  test_sort(&swap_sort, "Swap sort: ");
+  test_sort(&insertion_sort, "Insert sort: ");
+  test_sort(&quick_sort, "Quick sort: ");
+  test_sort(&select_sort, "Select sort: ");
 
   return 0;
 }
