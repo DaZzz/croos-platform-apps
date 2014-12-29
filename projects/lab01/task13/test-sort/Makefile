@@ -1,4 +1,6 @@
 all: test-sort.o
 
-test-sort.o: test-sort.cpp test-sort.h
-	g++ -c -o ../../_build/$@ $<
+INC=-I../awesome-sort/
+
+test-sort.o: test-sort.cpp
+	g++ -c -o ../../_build/$@  $(INC) $<
