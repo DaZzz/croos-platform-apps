@@ -1,12 +1,16 @@
-all: test-sort
+SOURCES := test-sort.cpp
+CPPFLAGS += -MMD -MP -I ../awesome-sort/
 
-CPPFLAGS += -I ../awesome-sort/
+vpath %.d $(OUT_DIR)
+vpath %.o $(OUT_DIR)
 
-test-sort: test-sort.o | _out
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $(OUT_DIR)/test-sort $(OUT_DIR)/test-sort.o $(OUT_DIR)/awesome-sort.a
+$(OUT_DIR)/test-sort: $(SOURCES:%.cpp=$(OUT_DIR)/%.o) | _out
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $@ $^  $(OUT_DIR)/awesome-sort.a
 
-test-sort.o: test-sort.cpp | _out
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c -o $(OUT_DIR)/$@ $<
+$(OUT_DIR)/%.o: %.cpp | _out
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c -o $@ $<
+
+-include $(SOURCES:%.cpp=$(OUT_DIR)/%.d)
 
 _out:
 	mkdir -p $(OUT_DIR)
