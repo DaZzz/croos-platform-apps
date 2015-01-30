@@ -9,3 +9,10 @@ awesome-sort.o: awesome-sort.cpp | _out
 
 _out:
 	mkdir -p $(OUT_DIR)
+
+# Динамическая библиотека
+.PHONY: dynamic
+dynamic: awesome-sort.so
+
+awesome-sort.so: awesome-sort.cpp | _out
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -dynamiclib -flat_namespace $< -o $(OUT_DIR)/$@

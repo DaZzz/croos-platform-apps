@@ -8,7 +8,7 @@ OUT_DIR := $(CURDIR)/../_build/make-build
 subdirs: $(SUBDIRS)
 
 $(SUBDIRS):
-	$(MAKE) -C $@ OUT_DIR=$(OUT_DIR)
+	$(MAKE) $(MAKECMDGOALS) -C $@ OUT_DIR=$(OUT_DIR)
 
 test-sort: awesome-sort
 
@@ -17,3 +17,6 @@ test-sort: awesome-sort
 
 clean:
 	rm -rf $(OUT_DIR)
+
+.PHONY: dynamic
+dynamic: subdirs

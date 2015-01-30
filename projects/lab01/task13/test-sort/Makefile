@@ -14,3 +14,10 @@ $(OUT_DIR)/%.o: %.cpp | _out
 
 _out:
 	mkdir -p $(OUT_DIR)
+
+# C динамическая библиотекой
+.PHONY: dynamic
+dynamic: $(OUT_DIR)/test-sort-dynamic
+
+$(OUT_DIR)/test-sort-dynamic: $(SOURCES:%.cpp=$(OUT_DIR)/%.o) | _out
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $@ $^ $(OUT_DIR)/awesome-sort.so
