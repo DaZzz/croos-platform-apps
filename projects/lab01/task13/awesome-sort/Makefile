@@ -5,7 +5,7 @@ awesome-sort.a: awesome-sort.o | _out
 	ar rc $(OUT_DIR)/$@ $(OUT_DIR)/$<
 
 awesome-sort.o: awesome-sort.cpp | _out
-	$(CXX) -c -o $(OUT_DIR)/$@ $<
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c -o $(OUT_DIR)/$@ $<
 
 _out:
 	mkdir -p $(OUT_DIR)
